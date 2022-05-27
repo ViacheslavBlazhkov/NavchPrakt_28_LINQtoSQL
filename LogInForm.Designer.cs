@@ -52,6 +52,7 @@ namespace NavchPrakt_28_LINQtoSQL
             this.button2.TabIndex = 1;
             this.button2.Text = "Адміністратор";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -80,7 +81,7 @@ namespace NavchPrakt_28_LINQtoSQL
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
     }

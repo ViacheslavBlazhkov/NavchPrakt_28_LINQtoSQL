@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -124,7 +117,7 @@ namespace NavchPrakt_28_LINQtoSQL
         private void button6_Click(object sender, EventArgs e)
         {
             conn.Close(); conn.Open();
-            query = $"DELETE FROM Vyrobnyk WHERE nazvaVyrobnyk = '{textBox19.Text}'";
+            query = $"DELETE FROM Vyrobnyk WHERE idVyrobnyk = '{textBox19.Text}'";
             MySqlCommand cmd3 = new MySqlCommand(query, conn);
 
             MessageBox.Show($"Видалено об'єктів: {cmd3.ExecuteNonQuery()}");
@@ -133,10 +126,38 @@ namespace NavchPrakt_28_LINQtoSQL
         private void button5_Click(object sender, EventArgs e)
         {
             conn.Close(); conn.Open();
-            query = $"DELETE FROM Tovar WHERE nazvaTovar = '{textBox16.Text}'";
+            query = $"DELETE FROM Tovar WHERE idTovar = '{textBox16.Text}'";
             MySqlCommand cmd3 = new MySqlCommand(query, conn);
 
             MessageBox.Show($"Видалено об'єктів: {cmd3.ExecuteNonQuery()}");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            conn.Close(); conn.Open();
+            query = $"UPDATE Vyrobnyk SET adresaVyrobnyk = '{textBox15.Text}' WHERE idVyrobnyk = {textBox14.Text}";
+            MySqlCommand cmd3 = new MySqlCommand(query, conn);
+
+            MessageBox.Show($"Оновлено об'єктів: {cmd3.ExecuteNonQuery()}");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            conn.Close(); conn.Open();
+            query = $"UPDATE Tovar SET cinaTovar = '{textBox17.Text}' WHERE idTovar = {textBox13.Text}";
+            MySqlCommand cmd3 = new MySqlCommand(query, conn);
+
+            MessageBox.Show($"Оновлено об'єктів: {cmd3.ExecuteNonQuery()}");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (Program.lf.button1.Focused == true)
+            {
+                tabControl1.TabPages.Remove(tabPage2);
+                tabControl1.TabPages.Remove(tabPage3);
+                tabControl1.TabPages.Remove(tabPage4);
+            }
         }
     }
 }

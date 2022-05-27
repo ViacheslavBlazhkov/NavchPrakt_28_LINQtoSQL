@@ -85,6 +85,18 @@ namespace NavchPrakt_28_LINQtoSQL
             this.button6 = new System.Windows.Forms.Button();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox22 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -591,9 +603,9 @@ namespace NavchPrakt_28_LINQtoSQL
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(262, 198);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 17);
+            this.label19.Size = new System.Drawing.Size(21, 17);
             this.label19.TabIndex = 43;
-            this.label19.Text = "Назва";
+            this.label19.Text = "ID";
             // 
             // button5
             // 
@@ -626,9 +638,9 @@ namespace NavchPrakt_28_LINQtoSQL
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(262, 76);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 17);
+            this.label23.Size = new System.Drawing.Size(21, 17);
             this.label23.TabIndex = 35;
-            this.label23.Text = "Назва";
+            this.label23.Text = "ID";
             // 
             // button6
             // 
@@ -649,6 +661,18 @@ namespace NavchPrakt_28_LINQtoSQL
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.textBox17);
+            this.tabPage4.Controls.Add(this.label22);
+            this.tabPage4.Controls.Add(this.textBox15);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.Controls.Add(this.label17);
+            this.tabPage4.Controls.Add(this.button9);
+            this.tabPage4.Controls.Add(this.textBox13);
+            this.tabPage4.Controls.Add(this.label18);
+            this.tabPage4.Controls.Add(this.label20);
+            this.tabPage4.Controls.Add(this.button10);
+            this.tabPage4.Controls.Add(this.textBox14);
             this.tabPage4.Controls.Add(this.button8);
             this.tabPage4.Controls.Add(this.textBox22);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
@@ -657,6 +681,108 @@ namespace NavchPrakt_28_LINQtoSQL
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Оновлення";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(345, 212);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(38, 17);
+            this.label24.TabIndex = 65;
+            this.label24.Text = "Ціна";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(304, 232);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(124, 22);
+            this.textBox17.TabIndex = 64;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(345, 93);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(56, 17);
+            this.label22.TabIndex = 63;
+            this.label22.Text = "Адреса";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(304, 113);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(124, 22);
+            this.textBox15.TabIndex = 62;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(275, 177);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(48, 17);
+            this.label16.TabIndex = 61;
+            this.label16.Text = "Товар";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(215, 215);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(21, 17);
+            this.label17.TabIndex = 60;
+            this.label17.Text = "ID";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(450, 177);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(96, 78);
+            this.button9.TabIndex = 59;
+            this.button9.Text = "Змінити ціну";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(174, 232);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(124, 22);
+            this.textBox13.TabIndex = 58;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(263, 50);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(72, 17);
+            this.label18.TabIndex = 57;
+            this.label18.Text = "Виробник";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(215, 93);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(21, 17);
+            this.label20.TabIndex = 56;
+            this.label20.Text = "ID";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(450, 50);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(96, 85);
+            this.button10.TabIndex = 55;
+            this.button10.Text = "Змінити адресу";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(174, 113);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(124, 22);
+            this.textBox14.TabIndex = 54;
             // 
             // button8
             // 
@@ -684,6 +810,7 @@ namespace NavchPrakt_28_LINQtoSQL
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -762,6 +889,18 @@ namespace NavchPrakt_28_LINQtoSQL
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox textBox14;
     }
 }
 

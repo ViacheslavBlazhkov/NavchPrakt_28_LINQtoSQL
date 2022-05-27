@@ -11,6 +11,9 @@ namespace NavchPrakt_28_LINQtoSQL
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
+
+        public static LogInForm lf;
+
         [STAThread]
         static void Main()
         {
