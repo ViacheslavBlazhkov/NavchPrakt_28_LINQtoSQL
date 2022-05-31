@@ -11,16 +11,14 @@ namespace NavchPrakt_28_LINQtoSQL
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAdmailLogIn_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            MainForm f = new MainForm();
             f.Show();
-            
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonUserLogIn_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            MainForm f = new MainForm();
             f.Show();
         }
     }

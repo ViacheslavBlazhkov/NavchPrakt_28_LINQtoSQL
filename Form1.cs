@@ -5,9 +5,9 @@ using MySql.Data.MySqlClient;
 
 namespace NavchPrakt_28_LINQtoSQL
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -15,7 +15,6 @@ namespace NavchPrakt_28_LINQtoSQL
         MySqlConnection conn = SQLConnection.GetDBConnection();
         FillTables ft = new FillTables();
         string query = "";
-        
 
         private void buttonVyrAll_Click(object sender, EventArgs e)
         {
@@ -106,13 +105,6 @@ namespace NavchPrakt_28_LINQtoSQL
             int number1 = cmd3.ExecuteNonQuery();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            conn.Close(); conn.Open();
-            query = textBox8.Text;
-            MySqlCommand cmd3 = new MySqlCommand(query, conn);
-            int number1 = cmd3.ExecuteNonQuery();
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -132,32 +124,42 @@ namespace NavchPrakt_28_LINQtoSQL
             MessageBox.Show($"Видалено об'єктів: {cmd3.ExecuteNonQuery()}");
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        
+
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            conn.Close(); conn.Open();
-            query = $"UPDATE Vyrobnyk SET adresaVyrobnyk = '{textBox15.Text}' WHERE idVyrobnyk = {textBox14.Text}";
-            MySqlCommand cmd3 = new MySqlCommand(query, conn);
-
-            MessageBox.Show($"Оновлено об'єктів: {cmd3.ExecuteNonQuery()}");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            conn.Close(); conn.Open();
-            query = $"UPDATE Tovar SET cinaTovar = '{textBox17.Text}' WHERE idTovar = {textBox13.Text}";
-            MySqlCommand cmd3 = new MySqlCommand(query, conn);
-
-            MessageBox.Show($"Оновлено об'єктів: {cmd3.ExecuteNonQuery()}");
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            if (Program.lf.button1.Focused == true)
+            if (Program.lf.buttonUserLogIn.Focused == true)
             {
-                tabControl1.TabPages.Remove(tabPage2);
-                tabControl1.TabPages.Remove(tabPage3);
-                tabControl1.TabPages.Remove(tabPage4);
+                tabControl1.TabPages.Remove(tabPageInsert);
+                tabControl1.TabPages.Remove(tabPageDelete);
+                tabControl1.TabPages.Remove(tabPageUpdate);
             }
+        }
+
+        private void buttonChangeAddress_Click(object sender, EventArgs e)
+        {
+            conn.Close(); conn.Open();
+            query = $"UPDATE Vyrobnyk SET adresaVyrobnyk = '{textBoxAddress.Text}' WHERE idVyrobnyk = {textBoxIDVyrobnyk.Text}";
+            MySqlCommand cmd3 = new MySqlCommand(query, conn);
+
+            MessageBox.Show($"Оновлено об'єктів: {cmd3.ExecuteNonQuery()}");
+        }
+        private void buttonChangePrice_Click(object sender, EventArgs e)
+        {
+            conn.Close(); conn.Open();
+            query = $"UPDATE Tovar SET cinaTovar = '{textBoxPrice.Text}' WHERE idTovar = {textBoxIDTovar.Text}";
+            MySqlCommand cmd3 = new MySqlCommand(query, conn);
+
+            MessageBox.Show($"Оновлено об'єктів: {cmd3.ExecuteNonQuery()}");
+        }
+
+        private void buttonHardcode_Click(object sender, EventArgs e)
+        {
+            conn.Close(); conn.Open();
+            query = textBoxHardcode.Text;
+            MySqlCommand cmd3 = new MySqlCommand(query, conn);
+            int number1 = cmd3.ExecuteNonQuery();
         }
     }
 }
